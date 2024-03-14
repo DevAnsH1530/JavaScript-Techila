@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Number1:</th>
+            <th>Operation:</th>
+            <th>Number2:</th>
+            <th>Output:</th>
+        </tr>
+
+        <tr>
+            <td><input placeholder="Enter num1" type="number" id="num1" onchange="calc()"></td>
+            <td><select id="sel" onchange="calc()">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">x</option>
+                <option value="/">/</option>
+            </select></td>
+            <td><input placeholder="Enter num2" type="number" id="num2" onchange="calc()"></td>
+            <td><input placeholder="output is" type="number" id="otpt" readonly></td>
+        </tr>
+    </table>
+    <!--form>
+        <label>Number1:</label>
+        <input placeholder="Enter num1" type="number" id="num1" onchange="calc()">
+        <label>Operation:</label>
+        <select id="sel" onchange="calc()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <label>Number2:</label>
+        <input placeholder="Enter num2" type="number" id="num2" onchange="calc()">
+
+        <label>Output:</label>
+        <input placeholder="output is" type="number" id="otpt" readonly>
+    </form-->
+
+    <script>
+        function calc() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            //console.log(typeof n1);
+
+            let n2 = parseFloat(document.getElementById("num2").value);
+            //console.log(typeof n2);
+
+            let op = document.getElementById("sel").value;
+            //console.log(typeof op);
+
+            /*
+            logic for calculator by using if block
+            */
+            /*if(num1!== null && num2 !== null) {
+                if(op=="+") {
+                    document.getElementById("otpt").value = n1+n2;
+                }
+                if(op=="-") {
+                    document.getElementById("otpt").value = n1-n2;
+                }
+                if(op=="*") {
+                    document.getElementById("otpt").value = n1*n2;
+                }
+                if(op=="/") {
+                    if(n2!=0){
+                        document.getElementById("otpt").value = n1/n2;
+                    }
+                    else {
+                        window.alert("Number2 must be a non zero number");
+                    }
+                }
+            }*/
+
+            /*
+            logic for calculator by using switch,case and default block
+            */
+            switch(op) {
+                case "+":
+                    document.getElementById("otpt").value = n1+n2;
+                    break;
+                case "-":
+                    document.getElementById("otpt").value = n1-n2;
+                    break;
+                case "*":
+                    document.getElementById("otpt").value = n1*n2;
+                    break;
+                case "/":
+                    if(n2!=0) {
+                        document.getElementById("otpt").value = n1/n2;
+                        break;
+                    }
+                    window.alert("number 2 must be a non-zero number");
+                    break;
+                default :
+                    window.alert("Enter a valid number");
+            }
+        }
+    </script>
+</body>
+</html>

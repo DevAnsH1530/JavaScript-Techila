@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro to JavaScript</title>
+</head>
+
+<body id="main">
+    <form>
+        <label for="in">In:</label>
+        <!--practice of onchange event using javascript-->
+        <input id="in" type="text" onchange="copyText()" placeholder="Enter your text here" required>
+        <br><br>
+        <label for="out">Out:</label>
+        <input id="out" type="text" placeholder="The text you've entered will be displayed here" readonly> <br><br>
+
+        <!-- input type="button" onchange="copyText()" value="click me" -->
+    </form>
+
+    <script>
+        function copyText() {
+            var x = document.getElementById("in").value
+            document.getElementById("out").value = x
+        }
+    </script>
+</body>
+</html>
