@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style18.css">
+    <script src="script18.js"></script>
+</head>
+<body>
+    <!-- creating my own body tag -->
+    <div id="body">
+
+        <!-- creating a box1 -->
+        <div class="box" id="box1">
+            <div id="box1.1">
+                b1
+                <button id="b1" onclick="b1()">&darr;</button>
+            </div>
+            <div id="1.2" class="innerContent">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ex tempora porro quam ipsa officiis perferendis reiciendis quod accusantium atque, illo aliquam voluptatum labore sequi ut eveniet in veritatis? Omnis!</p>
+            <button onclick="openBox2()">Next</button>
+            </div>
+        </div>
+
+        <div class="box" id="box2">
+            <div id="2.1">
+            b2
+            <button id="b2" onclick="collapse2()">&darr;</button>
+            </div>
+            <div id="2.2" class="innerContent">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ex tempora porro quam ipsa officiis perferendis reiciendis quod accusantium atque, illo aliquam voluptatum labore sequi ut eveniet in veritatis? Omnis!</p>
+                <button onclick="openBox3()">Next</button>
+            </div>
+        </div>
+
+        <div class="box" id="box3">
+            <div id="3.1">
+                b3
+                <button id="b3" onclick="collapse3()">&darr;</button>
+            </div>
+
+            <div id="3.2" class="innerContent">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ex tempora porro quam ipsa officiis perferendis reiciendis quod accusantium atque, illo aliquam voluptatum labore sequi ut eveniet in veritatis? Omnis!</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
