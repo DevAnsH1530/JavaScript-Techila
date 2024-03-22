@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navBar {
+
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+
+}
+
+#content {
+
+    background-color: blueviolet;
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+p {
+    width: 50%;
+    color: whitesmoke;
+}
+
+

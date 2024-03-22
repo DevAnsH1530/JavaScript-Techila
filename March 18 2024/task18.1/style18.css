@@ -1,0 +1,26 @@
+.box {
+    border: 2px dotted aqua;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#body {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+.innerContent {
+    display: none;
+}
