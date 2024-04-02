@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  name="hi1" onchange="myfun(event)">
+    <input type="text"  name="hi2" onchange="myfun(this)">
+    <input type="text"  name="hi3" onchange="myfun(this)">
+    <input type="text"  name="hi4" onchange="myfun(this)">
+    
+    <button type="button" onclick="check()">hello</button>
+
+    <!-- onblur="myfunc(this.value)" -->
+    <script>
+        function myfun(event) {
+            console.log(event)
+            console.log(event.target)
+            console.log(event.name)
+        }
+    </script>
+</body>
+</html>

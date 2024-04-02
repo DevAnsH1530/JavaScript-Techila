@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19.2</title>
+    <link rel="stylesheet" href="style19_2.css">
+    
+    <script src="script192.js"></script>
+</head>
+<body>
+    <form>
+        <div id="div1" style="display: block;">
+            <div>
+            <label>Name:</label>
+            <input type="text" class="input" onchange="myfun(this)" name="name">
+            <p class="error">Invalid Name</p>
+            </div>
+
+            <div>
+            <label>Email:</label>
+            <input type="text" class="input" onchange="myfun(this)" name="email">
+            <p class="error">Invalid Email</p>
+            </div>
+
+            <div>
+            <label>Contact:</label>
+            <input type="text" class="input" onchange="myfun(this)" name="contact">
+            <p class="error">Invalid Contact</p>
+            </div>
+
+            <div>
+            <label>Amount:</label>
+            <input type="text" class="input" onchange="myfun(this)" name="amount">
+            <p class="error">Invalid Amount</p>
+            </div>
+
+            <button type="button" style="background-color: blue; color: whitesmoke;" onclick="verifyAll()">Next</button>
+        </div>
+        <div id="div2" style="display: none;">
+            <div>
+            <lable>Email 2:</lable>
+            <input type="text" onchange="myfun(this)" name="email3" class="input2">
+            <p class="error2">Enter Valid Email 2</p>
+            </div>
+
+            <div>
+                <lable>Email 3:</lable>
+                <input type="text" onchange="myfun(this)" name="email4" class="input2">
+                <p class="error2">Enter Valid Email 3</p>
+            </div>
+            <button type="button" onclick="verifyAll2()"> click me</button>
+        </div>
+        
+    </form>
+    <button onclick="myfun2(this)" id="b1">b1</button>
+    <button onclick="myfun2(this)" id="b2">b2</button>
+</body>
+</html>

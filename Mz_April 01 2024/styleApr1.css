@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    border: 0.1px solid grey;
+    border-collapse: collapse;
+}
+.co {
+    background-color: yellow;
+    border:none;
+}
+.dar{
+    border: 2px solid black;
+}
+.gr {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 0.1px solid grey;
+}
+ol {
+    padding-left: 15px;
+}
+.lr {
+    border-left: 2px solid black; 
+    border-right: 2px solid black;
+}
+.lrb {
+    border-left: 2px solid black; 
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.ta {
+    text-align: center;
+}
+
+div {
+    font-family: calibri;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

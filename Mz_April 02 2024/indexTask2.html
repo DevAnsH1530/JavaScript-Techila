@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table task</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        input {
+            border: none;
+            text-align: center;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>(A*C)+D+(B*E)</h1>
+    <table id="tb">
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>Result</th>
+        </tr>
+
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4" ></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="background-color: blueviolet; color:aliceblue">Total</td>
+            <td></td>
+        </tr>
+
+
+
+        <!-- <tr>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="1"></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="2"></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="3"></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="4"></td>
+            <td><input type="number" oninput="calculate(this,this.value,this.parentElement.parentElement)" name="5"></td>
+            <td>0</td>
+        </tr> -->
+
+        <!-- <tr>
+            <td><input type="number" onchange="calculate(this,this.value,this.parentElement.parentElement)" name="1"></td>
+            <td><input type="number" onchange="calculate(this,this.value,this.parentElement.parentElement)" name="2"></td>
+            <td><input type="number" onchange="calculate(this,this.value,this.parentElement.parentElement)" name="3"></td>
+            <td><input type="number" onchange="calculate(this,this.value,this.parentElement.parentElement)" name="4"></td>
+            <td><input type="number" onchange="calculate(this,this.value,this.parentElement.parentElement)" name="5"></td>
+            <td>0</td>
+        </tr> -->
+    </table>
+
+    <script>
+        let arr = [0,0,0,0,0]
+        function calculate(curr,val,par) {
+            for(let i=0; i<5; i++) {
+                arr[i] = Number(par.cells[i].children[0].value);
+            }
+            console.log(arr)
+            let name_Val = curr.getAttribute('name');
+            switch(name_Val){
+                case '1':
+                    arr[0] = val;
+                    break;
+                case '2':
+                    arr[1] = val;
+                    break;
+                case '3':
+                    arr[2] = val;
+                    break;
+                case '4':
+                    arr[3] = val;
+                    break;
+                case '5':
+                    arr[4] = val;
+                    break;
+            }
+            let p1 = Number(arr[0]*arr[2]);
+            let p2 = Number(arr[1]*arr[4]);
+            console.log(p2)
+            par.lastElementChild.innerText = Number(p1+p2+Number(arr[3]))
+        }
+    </script>
+</body>
+</html>

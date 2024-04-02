@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#upper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-image: url('Badminton\ PNG\ Images\,\ \ Badminton\ Clipart\,\ Fitness\ PNG\ Transparent\ Background\ -\ Pngtree.jpeg');
+    background-repeat: no-repeat;
+    background-size: auto; */
+    background-image: linear-gradient( 125deg,
+   orange, pink, orange);
+}
+
+.gapAndCenter {
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: linear-gradient( 50deg,
+    white,orange, rgba(128, 0, 128, 0.511), skyblue, white);
+    height: 70vh;
+    width: 50vw;
+}
+
+.gapAndLR {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 3em;
+}

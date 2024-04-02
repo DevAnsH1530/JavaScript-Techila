@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+</head>
+<body>
+    <div>
+        <input type="text" id = 'input'>
+        <button type="button" onclick="func(this)">Click me to Add</button>
+    </div>
+    <div>
+        <table id = 'table'>
+        </table>
+    </div>
+
+    <script>
+        function func(event) {
+            let previousSibOfAdd = event.previousElementSibling.value;
+            createRowAndCells(previousSibOfAdd);
+        }
+
+        function delRow(event){
+            let storeInputGrandparent = event.parentElement;
+            console.log(storeInputGrandparent);
+            storeInputGrandparent.remove();
+        }
+
+        function editCon(event){
+            let cell3 = event.insertCell(3);
+            cell3.setAttribute('id',1)
+
+            cell3.innerHTML ='<input type="text" placeholder="Enter the text here which you want to edit" onblur="verify(this.value, this, this.parentElement)">'
+
+
+        }
+
+        function verify( val, curr, parent){
+            console.log([val, curr, parent]);
+            let tr = parent.parentElement;
+            let contentFieldValue = parent.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
+            let contentFieldRef = parent.previousElementSibling.previousElementSibling.previousElementSibling
+            if(val===undefined ||val.trim()===null || val.trim()===''){
+                tr.removeChild(parent);
+                alert("Don't leave the field blank")
+            } else if(val===contentFieldValue){
+                // console.log(parent.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML)
+                tr.removeChild(parent);
+                alert("Task is already added")
+            } else {
+                contentFieldRef.innerHTML = val
+                tr.removeChild(parent);
+                // alert("Task is successfully edited");
+            }
+        }
+
+        function createRowAndCells(i_n) {
+            let tb = document.getElementById('table');
+            let row = tb.insertRow(-1);
+            // row.setAttribute('id',++rowCountClassListMethod)
+            // let cell_id = rowCountClassListMethod *10 + 1;
+
+            let cell = row.insertCell(0);
+            // cell.setAttribute('id',cell_id)
+            // cell_id += 1
+
+            let cell1 = row.insertCell(1);
+            // cell1.setAttribute('id',cell_id)
+            // cell_id +=1;
+            let cell2 = row.insertCell(2);
+            // cell2.setAttribute('id',cell_id)
+
+            //Inserting the text enetered by user
+            cell.innerText = i_n;
+            cell1.innerHTML ='<input type="button" value="Edit" onclick="editCon(this.parentElement.parentElement)">'
+            cell2.innerHTML ='<input type="button" value="Del" onclick="delRow(this.parentElement)">'
+
+            // rowCountClassListMethod++
+        }
+    </script>
+
+    <!--script>
+
+        let rowCountClassListMethod = 0;
+        
+        function func(inp){
+
+            let i_n = document.getElementById(inp).value
+
+            if(rowCountClassListMethod===0) {
+                createRowAndCells(i_n);
+            } else if(rowCountClassListMethod>0){
+                for(let i = 1; i<=rowCountClassListMethod; i++){
+                    let cell_id = i *10 + 1;
+                    let val = document.getElementById(cell_id).innerHTML
+                    console.log(val)
+                    if(i_n === val) {
+                        window.alert( `${i_n} is already added. Enter something else`)
+                        return
+                    }
+                }
+                createRowAndCells(i_n);
+            }
+            //Inserting a row element in a table
+            
+        }
+
+        function createRowAndCells(i_n) {
+            let tb = document.getElementById('table');
+            let row = tb.insertRow(-1);
+            row.setAttribute('id',++rowCountClassListMethod)
+            let cell_id = rowCountClassListMethod *10 + 1;
+
+            let cell = row.insertCell(0);
+            cell.setAttribute('id',cell_id)
+            cell_id += 1
+
+            let cell1 = row.insertCell(1);
+            cell1.setAttribute('id',cell_id)
+            cell_id +=1;
+            let cell2 = row.insertCell(2);
+            cell2.setAttribute('id',cell_id)
+
+            //Inserting the text enetered by user
+            cell.innerText = i_n;
+            cell1.innerHTML ='<input type="button" value="Edit" onclick="editCon(event)">'
+            cell2.innerHTML ='<input type="button" value="Del" onclick="delRow(event)">'
+
+            // rowCountClassListMethod++
+        }
+
+        function editCon(event) {
+            let ea = event.target;
+            let peID = ea.parentElement.id;
+            let contentCellId = peID -1;
+            let tableRowID = (contentCellId - 1)/10;
+            let refOfTableRow = document.getElementById(tableRowID);
+            console.log(refOfTableRow)
+
+            let cell3 = refOfTableRow.insertCell(3);
+            cell3.innerHTML ='<input type="text" placeholder="Enter text here">'
+            let cell4 = refOfTableRow.insertCell(4);
+            cell4.innerHTML ='<input type="button" value="OK">'
+            console.log(contentCellId);
+            let tb = document.getElementById('table');
+        }
+
+        function delRow(event) {
+            let ea = event.target;
+            let peID = ea.parentElement.id;
+            let rowId = (peID -3)/10;
+            console.log(rowId)
+            let rowEl = document.getElementById(rowId);
+            document.getElementById('table').remove(document.getElementById(rowId));
+        }
+    </script-->
+
+</body>
+</html>

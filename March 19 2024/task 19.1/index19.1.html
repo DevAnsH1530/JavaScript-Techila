@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19.1</title>
+    <link rel="stylesheet" href="style19_1.css">
+    
+    <script src="script191.js"></script>
+</head>
+<body>
+    <form>
+        <Label >Name:</Label><br>
+        <input  type="text" onblur="myfunc(event)" placeholder="name">
+        <p id="name" class="error">Enter a valid name</p> <br>
+
+        <Label>Email:</Label><br>
+        <input type="text" onblur="myfunc(event)" placeholder="email">
+        <p id="email" class="error">Enter a valid Email Address</p><br>
+
+        <Label>Mobile:</Label><br>
+        <input type="text" onblur="myfunc(event)" placeholder="mobile"><br><br>
+        <p id="mobile" class="error">Enter a valid mobile number</p>
+
+        <Label>Amount:</Label><br>
+        <input type="number" onblur="myfunc(event)" placeholder="amount"><br><br>
+        <p id="amount" class="error">Enter amount</p>
+
+        <button type="submit" style="background-color: blue; color: whitesmoke;">SIGN UP</button>
+    </form>
+</body>
+</html>

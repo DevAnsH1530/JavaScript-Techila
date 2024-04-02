@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <style>
+        .dev{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <button onclick="fun(this)" >1</button>
+        <p class="dev">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste facere aspernatur odio debitis neque quibusdam dolorum minus earum molestiae commodi quia laborum delectus eligendi et ratione, repellat adipisci quasi!</p>
+    </div>
+
+    <div id="div2">
+        <button onclick="fun(this)" >2</button>
+        <p class="dev">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste facere aspernatur odio debitis neque quibusdam dolorum minus earum molestiae commodi quia laborum delectus eligendi et ratione, repellat adipisci quasi!</p>
+    </div>
+
+    <div id="div3">
+        <button onclick="fun(this)">3</button>
+        <p class="dev">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste facere aspernatur odio debitis neque quibusdam dolorum minus earum molestiae commodi quia laborum delectus eligendi et ratione, repellat adipisci quasi!</p>
+    </div>
+
+    <div id="div4">
+        <button onclick="fun(this)">4</button>
+        <p class="dev">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iste facere aspernatur odio debitis neque quibusdam dolorum minus earum molestiae commodi quia laborum delectus eligendi et ratione, repellat adipisci quasi!</p>
+    </div>
+
+    <script>
+        function fun(event) {
+            let storeAll = document.getElementsByClassName("dev");
+            console.log(storeAll)
+            for(let i = 0; i<storeAll.length; i++) {
+                storeAll[i].style.display = 'none'
+            }
+            event.nextElementSibling.style.display  = 'block';
+            console.log(event.parentNode)
+        }
+    </script>
+</body>
+</html>
